@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Uzbekistan Personal Guide & Business Assistant</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Open+Sans&display=swap" rel="stylesheet">
+  <style>
+    body { font-family:'Open Sans',sans-serif; margin:0; color:#222; background:#fdfdfd; }
+    header {
+      padding:100px 20px 20px;
+      text-align:center;
+      background:#000 url('images/tashkent-park.jpg') center/cover no-repeat;
+      color:white; position:relative;
+    }
+    .brand-name { position:absolute; top:20px; left:20px; color:#fff; font-size:16px; font-weight:bold; line-height:1.2; }
+    #language-switcher { position:absolute; top:20px; right:20px; }
+    #language-switcher button { background:none; border:none; color:#fff; font-size:14px; margin-left:10px; cursor:pointer; font-weight:bold; }
+    header h1 { font-family:'Playfair Display', serif; font-size:36px; margin-bottom:10px; }
+    header p { font-size:18px; margin:5px 0; }
+    .phone-number { margin-top:20px; font-size:20px; font-weight:bold; }
+    .phone-number a { color:#f9d17b; text-decoration:none; margin:0 8px; vertical-align:middle; }
+    .icon { width:24px; vertical-align:middle; margin:0 4px; }
+    section { padding:40px 20px; max-width:960px; margin:auto; }
+    .promo-img { max-width:100%; height:auto; margin:20px 0; border-radius:8px; box-shadow:0 4px 10px rgba(0,0,0,0.2); }
+    .cars { position:relative; padding-top:40px; background:#f0f0f0; text-align:center; }
+    .cars img { max-width:45%; margin:0 2%; opacity:0.9; }
+    .lang { display:none; }
+    .visible { display:block; }
+    footer { text-align:center; padding:20px; background:#f0f0f0; font-size:14px; margin-top:40px; }
+  </style>
+</head>
+<body>
+
+  <div class="brand-name">Uzbekistan Personal<br>Guide & Business Assistant</div>
+  <div id="language-switcher">
+    <button onclick="switchLanguage('ru')">RU</button>
+    <button onclick="switchLanguage('en')">EN</button>
+    <button onclick="switchLanguage('zh')">中文</button>
+  </div>
+
+  <header>
+    <h1 class="lang ru visible">Ваш человек в Узбекистане</h1>
+    <h1 class="lang en">Your Person in Uzbekistan</h1>
+    <h1 class="lang zh">您在乌兹别克斯坦的私人助理</h1>
+    <p class="lang ru visible">Помощь, сопровождение, доверие.</p>
+    <p class="lang en">Support, Guidance, Trust.</p>
+    <p class="lang zh">协助、陪同、信任。</p>
+    <div class="phone-number">
+      📞 <a href="tel:+998339181818">+998 33 918 18 18</a>
+      <a href="https://wa.me/998339181818" target="_blank"><img src="icons/whatsapp.png" class="icon" alt="WhatsApp"/></a>
+      <a href="https://t.me/+998339181818" target="_blank"><img src="icons/telegram.png" class="icon" alt="Telegram"/></a>
+    </div>
+  </header>
+
+  <section>
+    <img src="images/tashkent-park.jpg" alt="Tashkent City Park" class="promo-img"/>
+    <div class="lang ru visible">
+      <h2>О нас</h2>
+      <p>Премиум-услуга личного сопровождающего в Узбекистане: ассистент, переводчик, гид и организатор встреч. Экскурсии по Tashkent City Park, Registan и другим культурным местам.</p>
+    </div>
+    <div class="lang en">
+      <h2>About Us</h2>
+      <p>Premium personal escort in Uzbekistan: assistant, translator, guide, and meeting organizer. Sightseeing at Tashkent City Park, Registan and more cultural sites.</p>
+    </div>
+    <div class="lang zh">
+      <h2>关于我们</h2>
+      <p>乌兹别克斯坦高端陪同服务：助理、翻译、导游及会议安排。陪同参观塔什干城市公园、雷吉斯坦广场等文化景点。</p>
+    </div>
+  </section>
+
+  <section class="cars">
+    <h2 class="lang ru visible">Наши машины</h2>
+    <h2 class="lang en">Our Vehicles</h2>
+    <h2 class="lang zh">我们的车辆</h2>
+    <img src="images/tracker-free.png" alt="Chevrolet Tracker"/>
+    <img src="images/malibu-free.png" alt="Chevrolet Malibu XL"/>
+  </section>
+
+  <footer>Uzbekistan Personal Guide & Business Assistant © 2025</footer>
+
+  <script>
+    function switchLanguage(lang) {
+      document.querySelectorAll('.lang').forEach(el => el.classList.remove('visible'));
+      document.querySelectorAll('.' + lang).forEach(el => el.classList.add('visible'));
+    }
+    switchLanguage('ru');
+  </script>
+</body>
+</html>
