@@ -1,0 +1,29 @@
+<p><strong>Phone / WhatsApp / Telegram:</strong> <a href="tel:+998339181818">+998 33 918 18 18</a></p>
+    </div>
+    <div class="lang zh">
+      <h2>联系方式</h2>
+      <p>请随时通过电话、WhatsApp 或 Telegram 联系我们，我们全天候提供服务。</p>
+      <p><strong>电话 / WhatsApp / Telegram：</strong> <a href="tel:+998339181818">+998 33 918 18 18</a></p>
+    </div>
+  </section>
+
+  <footer>
+    Uzbekistan Personal Guide & Business Assistant © 2025
+  </footer>
+
+  <script>
+    function switchLanguage(lang) {
+      document.querySelectorAll('.lang').forEach(el => {
+        el.classList.remove('visible');
+      });
+      document.querySelectorAll('.' + lang).forEach(el => {
+        el.classList.add('visible');
+      });
+    }
+
+    // Язык по умолчанию — русский
+    switchLanguage('ru');
+  </script>
+
+</body>
+</html>
